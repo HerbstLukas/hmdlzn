@@ -13,6 +13,8 @@
 //Button Actions
 - (IBAction)shareButton:(id)sender;
 - (IBAction)saveTime:(id)sender;
+- (IBAction)shareTimeButton:(id)sender;
+
 
 //IBOutlets DatePicker and Label
 @property (strong, nonatomic) IBOutlet UILabel *timeToHmdlznLabel;

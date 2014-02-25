@@ -51,15 +51,6 @@
     self.timeToHmdlznLabel.text = [NSString stringWithFormat:@"%i Tage - %i Stunden - %i Minuten - %i Sekunden",zeitSpanne.day,zeitSpanne.hour,zeitSpanne.minute, zeitSpanne.second];
 }
 
-- (IBAction)shareButton:(id)sender
-{
-    NSString *noch = @"noch";
-    NSString *bis = @"bis HEMADLENZEN 2014!";
-    NSArray *itemToShare = [NSArray arrayWithObjects:noch, self.timeToHmdlznLabel.text, bis, nil];
-    UIActivityViewController *controller = [[UIActivityViewController alloc] initWithActivityItems:itemToShare applicationActivities:nil];
-    [self presentViewController:controller animated:YES completion:nil];
-}
-
 - (IBAction)saveTime:(id)sender
 {
     //Hole Datum von Picker
@@ -83,5 +74,14 @@
     
     //Run zeitSpanneBerechnen
     [self zeitSpanneBerechnen];
+}
+
+- (IBAction)shareTimeButton:(id)sender
+{
+    NSString *noch = @"noch";
+    NSString *bis = @"bis HEMADLENZEN 2014!";
+    NSArray *itemToShare = [NSArray arrayWithObjects:noch, self.timeToHmdlznLabel.text, bis, nil];
+    UIActivityViewController *controller = [[UIActivityViewController alloc] initWithActivityItems:itemToShare applicationActivities:nil];
+    [self presentViewController:controller animated:YES completion:nil];
 }
 @end
