@@ -1,6 +1,10 @@
 hmdlzn
 ======
 
+<p align="center">
+  <img src="https://www.dropbox.com/s/hohuxxmp6uplwpj/hmdlzn.png" alt="hmdlzn" title="hmdlzn-App">
+</p>
+
 Kleine iOS App in der man den Start von Hemadlenzen eintragen kann und dann angezeigt bekommt wie lang es noch bis zum Startzeitpunkt ist.
 
 ###About:
@@ -14,6 +18,8 @@ Der Code ist unsauber aber funktioniert ^^ <br>
 * Automatischer vergleich des aktuellen Datums + Uhrzeit
 * Share Funktion / Mail / SMS / Twitter / Facebook / Copy-To-Clipboard
 * Datumseinstellung wird nun gespeichert, kann aber verändert werden
+
+###Video:
 
 
 ###ToDo:
