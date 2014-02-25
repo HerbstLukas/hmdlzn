@@ -74,7 +74,7 @@
     
     //NZAlertView - TimeSet
     NZAlertView *saveSucces = [[NZAlertView alloc] initWithStyle:NZAlertStyleSuccess
-                                                           title:@"YEAH!"
+                                                           title:@"d"
                                                          message:@"Zeitpunkt für das erste Bier ist gespeichert!"
                                                         delegate:nil];
     
