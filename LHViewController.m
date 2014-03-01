@@ -59,11 +59,10 @@
         self.timeToHmdlznLabel.text = @"ES IST SOWEIT!!!";
     } else
     {
-        self.timeToHmdlznLabel.text = [NSString stringWithFormat:@"%li Monate - %li Tage - %li Stunden - %li Minuten",(long)zeitSpanne.month,(long)zeitSpanne.day,(long)zeitSpanne.hour, (long)zeitSpanne.minute];
+        self.timeToHmdlznLabel.text = [NSString stringWithFormat:@"%li Monate - %li Tage - %li Stunden - %li Minuten - %li Sekunden",(long)zeitSpanne.month,(long)zeitSpanne.day,(long)zeitSpanne.hour, (long)zeitSpanne.minute, (long)zeitSpanne.second];
         
         self.nochLabel.text = @"noch";
         self.bisLabel.text = @"bis";
-        //self.timeToHmdlznLabel.text = [NSString stringWithFormat:@"%i Monate - %i Tage - %i Stunden - %i Minuten",zeitSpanne.month,zeitSpanne.day,zeitSpanne.hour, zeitSpanne.minute];
     }
 
 }
@@ -96,7 +95,7 @@
 - (IBAction)shareTimeButton:(id)sender
 {
     NSString *noch = @"noch";
-    NSString *bis = @"bis HEMADLENZEN 2014!";
+    NSString *bis = @"bis HEMADLENZN 2015!";
     NSArray *itemToShare = [NSArray arrayWithObjects:noch, self.timeToHmdlznLabel.text, bis, nil];
     UIActivityViewController *controller = [[UIActivityViewController alloc] initWithActivityItems:itemToShare applicationActivities:nil];
     [self presentViewController:controller animated:YES completion:nil];
