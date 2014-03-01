@@ -8,6 +8,7 @@
 
 #import "LHViewController.h"
 #import "NZAlertView.h"
+#import "NSDate-Utilities.h"
 
 @interface LHViewController ()
 
@@ -20,7 +21,7 @@
     [super viewDidLoad];
     
     //Set Title
-    self.title = @"Hemadlenzen <3";
+    self.title = @"Hemadlenzn <3";
     
     if (![@"1" isEqualToString:[[NSUserDefaults standardUserDefaults]objectForKey:@"seved"]])
     {
@@ -48,7 +49,23 @@
                                                                    fromDate:[NSDate date]
                                                                      toDate:self.dateFromPicker
                                                                     options:0];
-    self.timeToHmdlznLabel.text = [NSString stringWithFormat:@"%i Tage - %i Stunden - %i Minuten - %i Sekunden",zeitSpanne.day,zeitSpanne.hour,zeitSpanne.minute, zeitSpanne.second];
+    
+    NSDate *today = [NSDate date];
+    
+    if([self.dateFromPicker isEarlierThanDate:today])
+    {
+        self.nochLabel.text = @"JUHUU";
+        self.bisLabel.text = @"";
+        self.timeToHmdlznLabel.text = @"ES IST SOWEIT!!!";
+    } else
+    {
+        self.timeToHmdlznLabel.text = [NSString stringWithFormat:@"%li Monate - %li Tage - %li Stunden - %li Minuten",(long)zeitSpanne.month,(long)zeitSpanne.day,(long)zeitSpanne.hour, (long)zeitSpanne.minute];
+        
+        self.nochLabel.text = @"noch";
+        self.bisLabel.text = @"bis";
+        //self.timeToHmdlznLabel.text = [NSString stringWithFormat:@"%i Monate - %i Tage - %i Stunden - %i Minuten",zeitSpanne.month,zeitSpanne.day,zeitSpanne.hour, zeitSpanne.minute];
+    }
+
 }
 
 - (IBAction)saveTime:(id)sender
